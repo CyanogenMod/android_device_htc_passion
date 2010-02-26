@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/htc/passion-common/passion_us.mk)
+$(call inherit-product, device/htc/passion-common/passion.mk)
 $(call inherit-product, device/htc/passion/passion.mk)
 
 PRODUCT_COPY_FILES += \
