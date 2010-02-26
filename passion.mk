@@ -34,6 +34,27 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.sf.lcd_density=240 \
+    rild.libpath=/system/lib/libhtc_ril.so \
+    wifi.interface=eth0 \
+    wifi.supplicant_scan_interval=15
+
+# Default network type.
+# 0 => WCDMA preferred.
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.default_network=0
+
+# The OpenGL ES API level that is natively supported by this device.
+# This is a 16.16 fixed point number
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opengles.version=131072
+
+# This is a high density device with more memory, so larger vm heaps for it.
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapsize=24m
+
+
 # Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/passion/passion-vendor.mk)
 
