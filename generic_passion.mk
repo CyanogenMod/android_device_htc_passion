@@ -12,8 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
-$(call inherit-product, device/htc/passion/passion_us.mk)
+#
+# This file is the build configuration for a generic Android
+# build for passion hardware. This cleanly combines a set of
+# device-specific aspects (drivers) with a device-agnostic
+# product configuration (apps).
+#
 
+# Inherit from those products. Most specific first.
+$(call inherit-product, device/htc/passion/passion_us.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
+
+# Discard inherited values and use our own instead.
 PRODUCT_NAME := generic_passion
 PRODUCT_DEVICE := passion

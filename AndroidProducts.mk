@@ -12,5 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+#
+# This file lists the product definition files that define
+# configurations which are actually buildable (e.g. through lunch)
+#
+
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/generic_passion.mk

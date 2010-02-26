@@ -12,6 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+#
+# This file sets variables that control the way modules are built
+# thorughout the system. It should not be used to conditionally
+# disable makefiles (the proper mechanism to control what gets
+# included in a build is to use PRODUCT_PACKAGES in a product
+# definition file).
+#
+
+# Get the generic variables that are common between all versions
+# of passion
 include device/htc/passion-common/BoardConfigCommon.mk
 
 TARGET_RECOVERY_UI_LIB := librecovery_ui_passion librecovery_ui_htc

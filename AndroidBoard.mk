@@ -12,8 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := $(call my-dir)
+#
+# AndroidBoard.mk is a legacy mechanism to deal with a few
+# edge-cases that can't be managed otherwise. No new rules
+# should be added to this file.
+#
 
--include vendor/htc/passion/AndroidBoardVendor.mk
+# Least specific includes go first, so that they can get
+# overridden further down
 
+# include rules from the generic passion board
 include device/htc/passion-common/AndroidBoardCommon.mk
+
+# include the non-open-source counterpart to this file
+-include vendor/htc/passion/AndroidBoardVendor.mk
