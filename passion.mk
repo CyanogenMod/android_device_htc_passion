@@ -14,9 +14,13 @@
 # limitations under the License.
 #
 
--include vendor/htc/passion/passion-vendor.mk
+#
+# This is the product configuration for a generic GSM passion,
+# not specialized for any geography.
+#
 
-PRODUCT_COPY_FILES += \
+# First, the aspects that are specific to GSM
+PRODUCT_COPY_FILES := \
     device/htc/passion/init.mahimahi.rc:root/init.mahimahi.rc \
     device/htc/passion/bcm4329.ko:system/lib/modules/bcm4329.ko
 
@@ -28,3 +32,6 @@ endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
+
+# Also get non-open-source GSM-specific aspects if available
+$(call inherit-product-if-exists, vendor/htc/passion/passion-vendor.mk)
