@@ -19,7 +19,8 @@
 # not specialized for any geography.
 #
 
-# First, the aspects that are specific to GSM
+# First, the most specific values, i.e. the aspects that are specific to GSM
+
 PRODUCT_COPY_FILES := \
     device/htc/passion/init.mahimahi.rc:root/init.mahimahi.rc \
     device/htc/passion/bcm4329.ko:system/lib/modules/bcm4329.ko
@@ -35,3 +36,6 @@ PRODUCT_COPY_FILES += \
 
 # Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/passion/passion-vendor.mk)
+
+# Finally, the least specific parts, i.e. the non-GSM-specific aspects
+$(call inherit-product, device/htc/passion-common/passion.mk)
