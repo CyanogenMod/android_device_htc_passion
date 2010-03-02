@@ -14,7 +14,15 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/htc/passion/passion.mk)
+#
+# This is the device-specific product configuration for passion,
+# configured with Europe-specific settings.
+#
 
-PRODUCT_COPY_FILES += \
+# These are the aspects of the product that are explicitly
+# specific to this file
+PRODUCT_COPY_FILES := \
 	device/htc/passion/gps.conf_EU:system/etc/gps.conf
+
+# The rest of the configuration is inherited from a generic config
+$(call inherit-product, device/htc/passion/passion.mk)
