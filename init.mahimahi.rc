@@ -90,5 +90,5 @@ service hciattach /system/bin/brcm_patchram_plus --enable_hci --enable_lpm \
     group bluetooth net_bt_admin
     disabled
 
-service dspcrashd /sbin/dspcrashd
+service dspcrashd /system/bin/dspcrashd
 
