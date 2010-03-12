@@ -19,10 +19,8 @@
 # configured with Asia-specific settings.
 #
 
-# These are the aspects of the product that are explicitly
-# specific to this file
-PRODUCT_COPY_FILES := \
-	device/htc/passion/gps.conf_AS:system/etc/gps.conf
+# The gps config appropriate for this device
+$(call inherit-product, device/common/gps/gps_as_supl.mk)
 
 # The rest of the configuration is inherited from a generic config
 $(call inherit-product, device/htc/passion/passion.mk)
