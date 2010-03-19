@@ -22,17 +22,7 @@
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
 PRODUCT_COPY_FILES := \
-    device/htc/passion/init.mahimahi.rc:root/init.mahimahi.rc \
-    device/htc/passion/bcm4329.ko:system/lib/modules/bcm4329.ko
-
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/htc/passion/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
+    device/htc/passion/init.mahimahi.rc:root/init.mahimahi.rc
 
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=240 \
