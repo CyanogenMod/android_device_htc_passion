@@ -13,10 +13,17 @@
 # limitations under the License.
 
 #
-# This file lists the product definition files that define
-# configurations which are actually buildable (e.g. through lunch)
+# This file is the build configuration for a full Android
+# build for passion hardware. This cleanly combines a set of
+# device-specific aspects (drivers) with a device-agnostic
+# product configuration (apps).
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/generic_passion.mk \
-    $(LOCAL_DIR)/full_passion.mk
+# Inherit from those products. Most specific first.
+$(call inherit-product, device/htc/passion/passion_us.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
+
+# Discard inherited values and use our own instead.
+PRODUCT_NAME := full_passion
+PRODUCT_DEVICE := passion
+PRODUCT_MODEL := Full Android on Passion
