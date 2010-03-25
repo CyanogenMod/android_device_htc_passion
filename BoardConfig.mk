@@ -20,6 +20,14 @@
 # definition file).
 #
 
+# WARNING: This line must come *before* including the proprietary
+# variant, so that it gets overwritten by the parent (which goes
+# against the traditional rules of inheritance).
+USE_CAMERA_STUB := true
+
+# inherit from the proprietary version
+-include vendor/htc/passion/BoardConfigVendor.mk
+
 # Get the generic variables that are common between all versions
 # of passion
 include device/htc/passion-common/BoardConfigCommon.mk
