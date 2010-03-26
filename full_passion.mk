@@ -20,6 +20,7 @@
 #
 
 # Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, device/htc/passion/passion_us.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 
