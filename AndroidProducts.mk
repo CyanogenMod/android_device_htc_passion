@@ -18,5 +18,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/generic_passion.mk \
     $(LOCAL_DIR)/full_passion.mk
