@@ -22,7 +22,8 @@
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
 PRODUCT_COPY_FILES := \
-    device/htc/passion/init.mahimahi.rc:root/init.mahimahi.rc
+    device/htc/passion/init.mahimahi.rc:root/init.mahimahi.rc \
+    device/htc/passion/ueventd.mahimahi.rc:root/ueventd.mahimahi.rc
 
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=240 \
