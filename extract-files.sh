@@ -73,8 +73,8 @@ adb pull /system/lib/libstagefrighthw.so ../../../vendor/htc/$DEVICE/proprietary
 
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES := \\
-    vendor/htc/__DEVICE__/proprietary/libgps.so:obj/lib/libgps.so \\
-    vendor/htc/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so
+    vendor/htc/__DEVICE__/proprietary/libcamera.so:obj/lib/libcamera.so \\
+    vendor/htc/__DEVICE__/proprietary/libgps.so:obj/lib/libgps.so
 
 # All the blobs necessary for passion
 PRODUCT_COPY_FILES += \\
