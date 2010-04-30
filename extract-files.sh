@@ -52,9 +52,7 @@ adb pull /system/lib/liboemcamera.so ../../../vendor/htc/$DEVICE/proprietary/lib
 adb pull /system/lib/libOmxCore.so ../../../vendor/htc/$DEVICE/proprietary/libOmxCore.so
 adb pull /system/lib/libOmxVdec.so ../../../vendor/htc/$DEVICE/proprietary/libOmxVdec.so
 adb pull /system/lib/libOmxVidEnc.so ../../../vendor/htc/$DEVICE/proprietary/libOmxVidEnc.so
-adb pull /system/lib/libopencorehw.so ../../../vendor/htc/$DEVICE/proprietary/libopencorehw.so
 adb pull /system/lib/libqcomm_omx.so ../../../vendor/htc/$DEVICE/proprietary/libqcomm_omx.so
-adb pull /system/lib/libstagefrighthw.so ../../../vendor/htc/$DEVICE/proprietary/libstagefrighthw.so
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/htc/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -110,9 +108,7 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/libOmxCore.so:system/lib/libOmxCore.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxVdec.so:system/lib/libOmxVdec.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \\
-    vendor/htc/__DEVICE__/proprietary/libopencorehw.so:system/lib/libopencorehw.so \\
-    vendor/htc/__DEVICE__/proprietary/libqcomm_omx.so:system/lib/libqcomm_omx.so \\
-    vendor/htc/__DEVICE__/proprietary/libstagefrighthw.so:system/lib/libstagefrighthw.so
+    vendor/htc/__DEVICE__/proprietary/libqcomm_omx.so:system/lib/libqcomm_omx.so
 EOF
 
 ./setup-makefiles.sh
