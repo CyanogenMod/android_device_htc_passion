@@ -23,7 +23,6 @@ adb pull /system/bin/mm-venc-omx-test ../../../vendor/htc/$DEVICE/proprietary/mm
 chmod 755 ../../../vendor/htc/$DEVICE/proprietary/mm-venc-omx-test
 adb pull /system/bin/parse_radio_log ../../../vendor/htc/$DEVICE/proprietary/parse_radio_log
 chmod 755 ../../../vendor/htc/$DEVICE/proprietary/parse_radio_log
-adb pull /system/etc/01_qcomm_omx.cfg ../../../vendor/htc/$DEVICE/proprietary/01_qcomm_omx.cfg
 adb pull /system/etc/AdieHWCodecSetting.csv ../../../vendor/htc/$DEVICE/proprietary/AdieHWCodecSetting.csv
 adb pull /system/etc/AudioBTID.csv ../../../vendor/htc/$DEVICE/proprietary/AudioBTID.csv
 adb pull /system/etc/firmware/bcm4329.hcd ../../../vendor/htc/$DEVICE/proprietary/bcm4329.hcd
@@ -50,9 +49,6 @@ adb pull /system/lib/liboemcamera.so ../../../vendor/htc/$DEVICE/proprietary/lib
 adb pull /system/lib/libOmxCore.so ../../../vendor/htc/$DEVICE/proprietary/libOmxCore.so
 adb pull /system/lib/libOmxVdec.so ../../../vendor/htc/$DEVICE/proprietary/libOmxVdec.so
 adb pull /system/lib/libOmxVidEnc.so ../../../vendor/htc/$DEVICE/proprietary/libOmxVidEnc.so
-adb pull /system/lib/libopencorehw.so ../../../vendor/htc/$DEVICE/proprietary/libopencorehw.so
-adb pull /system/lib/libqcomm_omx.so ../../../vendor/htc/$DEVICE/proprietary/libqcomm_omx.so
-adb pull /system/lib/libstagefrighthw.so ../../../vendor/htc/$DEVICE/proprietary/libstagefrighthw.so
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/htc/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
@@ -81,7 +77,6 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/akmd:/system/bin/akmd \\
     vendor/htc/__DEVICE__/proprietary/mm-venc-omx-test:/system/bin/mm-venc-omx-test \\
     vendor/htc/__DEVICE__/proprietary/parse_radio_log:/system/bin/parse_radio_log \\
-    vendor/htc/__DEVICE__/proprietary/01_qcomm_omx.cfg:/system/etc/01_qcomm_omx.cfg \\
     vendor/htc/__DEVICE__/proprietary/AdieHWCodecSetting.csv:/system/etc/AdieHWCodecSetting.csv \\
     vendor/htc/__DEVICE__/proprietary/AudioBTID.csv:/system/etc/AudioBTID.csv \\
     vendor/htc/__DEVICE__/proprietary/bcm4329.hcd:/system/etc/firmware/bcm4329.hcd \\
@@ -107,8 +102,7 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/liboemcamera.so:/system/lib/liboemcamera.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxCore.so:/system/lib/libOmxCore.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxVdec.so:/system/lib/libOmxVdec.so \\
-    vendor/htc/__DEVICE__/proprietary/libOmxVidEnc.so:/system/lib/libOmxVidEnc.so \\
-    vendor/htc/__DEVICE__/proprietary/libqcomm_omx.so:/system/lib/libqcomm_omx.so
+    vendor/htc/__DEVICE__/proprietary/libOmxVidEnc.so:/system/lib/libOmxVidEnc.so
 
 EOF
 
