@@ -108,9 +108,7 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/libOmxCore.so:/system/lib/libOmxCore.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxVdec.so:/system/lib/libOmxVdec.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxVidEnc.so:/system/lib/libOmxVidEnc.so \\
-    vendor/htc/__DEVICE__/proprietary/libopencorehw.so:/system/lib/libopencorehw.so \\
-    vendor/htc/__DEVICE__/proprietary/libqcomm_omx.so:/system/lib/libqcomm_omx.so \\
-    vendor/htc/__DEVICE__/proprietary/libstagefrighthw.so:/system/lib/libstagefrighthw.so
+    vendor/htc/__DEVICE__/proprietary/libqcomm_omx.so:/system/lib/libqcomm_omx.so
 
 EOF
 
