@@ -44,7 +44,6 @@ adb pull /system/lib/libgsl.so ../../../vendor/htc/$DEVICE/proprietary/libgsl.so
 adb pull /system/lib/libhtc_acoustic.so ../../../vendor/htc/$DEVICE/proprietary/libhtc_acoustic.so
 adb pull /system/lib/libhtc_ril.so ../../../vendor/htc/$DEVICE/proprietary/libhtc_ril.so
 adb pull /system/lib/liblvmxipc.so ../../../vendor/htc/$DEVICE/proprietary/liblvmxipc.so
-adb pull /system/lib/libmm-omxcore.so ../../../vendor/htc/$DEVICE/proprietary/libmm-omxcore.so
 adb pull /system/lib/liboemcamera.so ../../../vendor/htc/$DEVICE/proprietary/liboemcamera.so
 adb pull /system/lib/libOmxVdec.so ../../../vendor/htc/$DEVICE/proprietary/libOmxVdec.so
 adb pull /system/lib/libOmxVidEnc.so ../../../vendor/htc/$DEVICE/proprietary/libOmxVidEnc.so
@@ -103,7 +102,6 @@ PRODUCT_COPY_FILES += \\
     vendor/htc/__DEVICE__/proprietary/libhtc_acoustic.so:/system/lib/libhtc_acoustic.so \\
     vendor/htc/__DEVICE__/proprietary/libhtc_ril.so:/system/lib/libhtc_ril.so \\
     vendor/htc/__DEVICE__/proprietary/liblvmxipc.so:/system/lib/liblvmxipc.so \\
-    vendor/htc/__DEVICE__/proprietary/libmm-omxcore.so:/system/lib/libmm-omxcore.so \\
     vendor/htc/__DEVICE__/proprietary/liboemcamera.so:/system/lib/liboemcamera.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxVdec.so:/system/lib/libOmxVdec.so \\
     vendor/htc/__DEVICE__/proprietary/libOmxVidEnc.so:/system/lib/libOmxVidEnc.so
