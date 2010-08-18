@@ -1,5 +1,5 @@
 require mid=P*
 require board=mahimahi|nexusone
-require version-bootloader=0.33.2012|0.33.0012
+require version-bootloader=0.33.2012|0.33.0012|0.35.2017|0.35.0017
 require version-microp=0b15
-require version-baseband=4.06.00.12_7
+require version-baseband=4.06.00.12_7|5.08.00.04
