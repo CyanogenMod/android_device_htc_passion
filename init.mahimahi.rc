@@ -62,8 +62,6 @@ on boot
     setprop ro.ril.fd.scron.timeout 4
     setprop ro.ril.fd.scroff.timeout 3
 
-    # GPRS class
-    setprop ro.ril.gprsclass 10
 
 # compass/accelerometer daemon
 service akmd /system/bin/akmd
