@@ -21,3 +21,5 @@
 # function: add_lunch_combo generic-eng
 
 add_lunch_combo full_passion-userdebug
+add_lunch_combo full_passion-eng
+
