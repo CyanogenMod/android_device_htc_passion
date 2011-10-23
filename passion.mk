@@ -45,7 +45,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # This is a high density device with more memory, so larger vm heaps for it.
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapsize=32m
+    dalvik.vm.heapsize=48m
 
 
 ## (2) Also get non-open-source GSM-specific aspects if available
